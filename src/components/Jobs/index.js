@@ -339,7 +339,10 @@ class Jobs extends Component {
               <h1 className="employee-heading">Type of Employment</h1>
               <ul className="employee-items-container">
                 {employmentTypesList.map(eachEmployee => (
-                  <li className="employee-item">
+                  <li
+                    className="employee-item"
+                    key={eachEmployee.employmentTypeId}
+                  >
                     <input
                       className="input-employee"
                       type="checkbox"
@@ -362,7 +365,7 @@ class Jobs extends Component {
                 <h1 className="main-heading">Salary Range</h1>
                 <ul className="salary-container">
                   {salaryRangesList.map(eachSalary => (
-                    <li className="salary-list">
+                    <li className="salary-list" key={eachSalary.salaryRangeId}>
                       <input
                         type="radio"
                         id={eachSalary.salaryRangeId}
